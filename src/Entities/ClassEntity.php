@@ -33,7 +33,7 @@ class ClassEntity extends ModifiableBaseEntity
     /**
      * @return ConstantEntity[]
      */
-    public function getConstants()
+    public function &getConstants()
     {
         return $this->constants;
     }
@@ -41,7 +41,7 @@ class ClassEntity extends ModifiableBaseEntity
     /**
      * @return PropertyEntity[]
      */
-    public function getProperties()
+    public function &getProperties()
     {
         return $this->properties;
     }
@@ -51,7 +51,7 @@ class ClassEntity extends ModifiableBaseEntity
         return !empty($this->getMethod($name));
     }
 
-    public function getMethod($name)
+    public function &getMethod($name)
     {
         foreach ($this->methods as $method) {
             if ($method->getName() === $name) {
@@ -67,7 +67,7 @@ class ClassEntity extends ModifiableBaseEntity
         return !empty($this->getProperty($name));
     }
 
-    public function getProperty($name)
+    public function &getProperty($name)
     {
         foreach ($this->properties as $property) {
             if ($property->getName() === $name) {

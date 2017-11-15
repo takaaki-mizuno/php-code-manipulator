@@ -49,7 +49,7 @@ class FileEntity extends BaseEntity
     /**
      * @return ClassEntity[]
      */
-    public function getClasses()
+    public function &getClasses()
     {
         return $this->classes;
     }
@@ -57,7 +57,7 @@ class FileEntity extends BaseEntity
     /**
      * @return InterfaceEntry[]
      */
-    public function getInterfaces()
+    public function &getInterfaces()
     {
         return $this->interfaces;
     }
@@ -65,7 +65,7 @@ class FileEntity extends BaseEntity
     /**
      * @return TraitEntry[]
      */
-    public function getTraits()
+    public function &getTraits()
     {
         return $this->traits;
     }
@@ -73,7 +73,7 @@ class FileEntity extends BaseEntity
     /**
      * @return FunctionEntity[]
      */
-    public function getFunctions()
+    public function &getFunctions()
     {
         return $this->functions;
     }

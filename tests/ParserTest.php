@@ -24,6 +24,7 @@ class ParserTest extends Base
             print PHP_EOL.PHP_EOL.$class->getName().PHP_EOL;
             $methods = $class->getMethods();
             foreach ($methods as $method) {
+                print_r($method->stringify());
                 print  '>'.$method->getName().PHP_EOL;
             }
         }
